@@ -112,6 +112,7 @@ class LFPArtifactDetectionSelection(SpyglassMixin, dj.Manual):
     """
 
 
+
 @schema
 class LFPArtifactDetection(SpyglassMixin, dj.Computed):
     definition = """

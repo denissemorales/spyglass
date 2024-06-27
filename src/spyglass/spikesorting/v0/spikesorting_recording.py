@@ -392,7 +392,7 @@ class SpikeSortingRecording(SpyglassMixin, dj.Computed):
             shutil.rmtree(recording_path)
 
         recording.save(
-            folder=recording_path, chunk_duration="10000ms", n_jobs=8
+            folder=recording_path, chunk_duration="10000ms", n_jobs=1
         )
 
         IntervalList.insert1(
