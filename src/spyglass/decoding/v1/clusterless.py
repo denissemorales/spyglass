@@ -224,6 +224,11 @@ class ClusterlessDecodingV1(SpyglassMixin, dj.Computed):
                         **predict_kwargs,
                     )
                 )
+
+            # if len(results) == 1:
+            #     results = results
+            # else:
+            #     results = xr.concat(results, dim="intervals")
             results = xr.concat(results, dim="intervals")
 
         # Save discrete transition and initial conditions
